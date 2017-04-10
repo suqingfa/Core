@@ -13,6 +13,8 @@ using WebApplication.Models;
 using WebApplication.Models.AccountViewModels;
 using WebApplication.Services;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using WebApplication.Data;
+using Microsoft.Net.Http.Headers;
 
 namespace WebApplication.Controllers
 {
@@ -22,6 +24,7 @@ namespace WebApplication.Controllers
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
 		private readonly RoleManager<IdentityRole> _roleManager;
+		private readonly ApplicationDbContext _context;
 		private readonly IEmailSender _emailSender;
         private readonly ISmsSender _smsSender;
         private readonly ILogger _logger;
@@ -31,6 +34,7 @@ namespace WebApplication.Controllers
             UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager,
 			RoleManager<IdentityRole> roleManager,
+			ApplicationDbContext context,
 			IOptions<IdentityCookieOptions> identityCookieOptions,
             IEmailSender emailSender,
             ISmsSender smsSender,
@@ -39,6 +43,7 @@ namespace WebApplication.Controllers
             _userManager = userManager;
             _signInManager = signInManager;
 			_roleManager = roleManager;
+			_context = context;
 			_externalCookieScheme = identityCookieOptions.Value.ExternalCookieAuthenticationScheme;
             _emailSender = emailSender;
             _smsSender = smsSender;
@@ -116,9 +121,15 @@ namespace WebApplication.Controllers
             ViewData["ReturnUrl"] = returnUrl;
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, Sex = model.Sex };
                 var result = await _userManager.CreateAsync(user, model.Password);
-                if (result.Succeeded)
+
+				var Image = new byte[model.Head.Length];
+				await model.Head.OpenReadStream().ReadAsync(Image, 0, Image.Length);
+				_context.Heads.Add(new Head { User = user, Image = Image});
+				await _context.SaveChangesAsync();
+
+				if (result.Succeeded)
                 {
 					// For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=532713
 					// Send an email with this link
@@ -142,9 +153,18 @@ namespace WebApplication.Controllers
             return View(model);
         }
 
-        //
-        // POST: /Account/Logout
-        [HttpPost]
+		//
+		// GET: /Account/Head
+		[HttpGet]
+		public async Task<IActionResult> Head(string id)
+		{
+			var head = await _context.Heads.FindAsync(id);
+			return File(head.Image, "image/jpeg");
+		}
+
+		//
+		// POST: /Account/Logout
+		[HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Logout()
         {

@@ -24,5 +24,6 @@ namespace WebApplication.Data
         }
 
 		public DbSet<Blog> Blogs { get; set; }
-    }
+		public DbSet<Head> Heads { get; set; }
+	}
 }

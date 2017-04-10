@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -13,7 +14,15 @@ namespace WebApplication.Models.AccountViewModels
         [Display(Name = "Email")]
         public string Email { get; set; }
 
-        [Required]
+		[Required]
+		public IFormFile Head { get; set; }
+
+		[Required]
+		[Display(Name = "Sex")]
+		[RegularExpression("(男|女)")]
+		public string Sex { get; set; }
+
+		[Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
