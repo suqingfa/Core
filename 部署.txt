@@ -1,0 +1,28 @@
+sudo apt-get install nginx
+sudo vi /etc/nginx/sites-available/default
+	server {
+	    listen 80;
+	    location / {
+	        proxy_pass http://localhost:5000;
+	        proxy_http_version 1.1;
+	        proxy_set_header Upgrade $http_upgrade;
+	        proxy_set_header Connection keep-alive;
+	        proxy_set_header Host $host;
+	        proxy_cache_bypass $http_upgrade;
+	    }  
+	}
+sudo service nginx restart
+
+sudo apt-get install supervisor
+sudo vi /etc/supervisor/conf.d/core.conf
+	[program:WebApplication1]
+	command=dotnet /home/ubuntu/PublishOutput/WebApplication.dll
+	directory=/home/ubuntu/PublishOutput
+	autostart=true
+	autorestart=true
+	stderr_logfile=/var/log/NetCore.err.log
+	stdout_logfile=/var/log/NetCore.out.log
+	environment=ASPNETCORE__ENVIRONMENT=Production
+	user=ubuntu
+	stopsignal=INT
+sudo service supervisor restart 
