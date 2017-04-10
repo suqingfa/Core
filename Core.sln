@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HangfireDemo", "HangfireDem
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggingDemo", "LoggingDemo\LoggingDemo.csproj", "{B2E63F3E-46C1-489C-A7A5-C2724C32961A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedisDemo", "RedisDemo\RedisDemo.csproj", "{3A8A2ED2-0210-4C79-BB73-7D41C799A7B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CachingDemo", "CachingDemo\CachingDemo.csproj", "{96AF6617-E59B-4E3E-B834-D5336C19A819}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{B2E63F3E-46C1-489C-A7A5-C2724C32961A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2E63F3E-46C1-489C-A7A5-C2724C32961A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2E63F3E-46C1-489C-A7A5-C2724C32961A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3A8A2ED2-0210-4C79-BB73-7D41C799A7B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3A8A2ED2-0210-4C79-BB73-7D41C799A7B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3A8A2ED2-0210-4C79-BB73-7D41C799A7B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3A8A2ED2-0210-4C79-BB73-7D41C799A7B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96AF6617-E59B-4E3E-B834-D5336C19A819}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96AF6617-E59B-4E3E-B834-D5336C19A819}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96AF6617-E59B-4E3E-B834-D5336C19A819}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96AF6617-E59B-4E3E-B834-D5336C19A819}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

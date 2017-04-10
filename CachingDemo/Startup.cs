@@ -29,7 +29,21 @@ namespace RedisDemo
         {
             // Add framework services.
             services.AddMvc();
-        }
+			services.AddMemoryCache();
+
+			// region 使用Redis保存Session			
+			services.AddDistributedRedisCache(option =>
+			{
+				//redis 连接字符串
+				option.Configuration = Configuration["WebConfig:Redis:Connection"];
+				//redis 实例名
+				option.InstanceName = Configuration["WebConfig:Redis:InstanceName"];
+			}
+			);
+
+			//添加Session并设置过期时长
+			services.AddSession(options => { options.IdleTimeout = TimeSpan.FromMinutes(Configuration.GetValue("WebConfig:SessionTimeOut", 30)); });
+		}
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
@@ -49,7 +63,9 @@ namespace RedisDemo
 
             app.UseStaticFiles();
 
-            app.UseMvc(routes =>
+			app.UseSession();
+
+			app.UseMvc(routes =>
             {
                 routes.MapRoute(
                     name: "default",
