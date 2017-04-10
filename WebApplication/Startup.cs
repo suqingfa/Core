@@ -48,9 +48,10 @@ namespace WebApplication
                 .AddDefaultTokenProviders();
 
             services.AddMvc();
+			services.AddMemoryCache();
 
-            // Add application services.
-            services.AddTransient<IEmailSender, AuthMessageSender>();
+			// Add application services.
+			services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();
         }
 
