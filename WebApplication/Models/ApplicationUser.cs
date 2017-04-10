@@ -10,10 +10,5 @@ namespace WebApplication.Models
     public class ApplicationUser : IdentityUser
     {
 		public virtual IEnumerable<Blog> Blogs { get; set; }
-
-		public ApplicationUser()
-		{
-			Blogs = new List<Blog>();
-		}
 	}
 }

@@ -8,6 +8,7 @@ namespace WebApplication.Models
 {
     public class Blog
     {
+		[Key]
 		public string Id { get; set; }
 		[Required]
 		public string UserId { get; set; }

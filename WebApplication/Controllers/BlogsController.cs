@@ -8,9 +8,11 @@ using Microsoft.EntityFrameworkCore;
 using WebApplication.Data;
 using WebApplication.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebApplication.Controllers
 {
+	[Authorize]
 	public class BlogsController : Controller
 	{
 		private readonly ApplicationDbContext _context;
