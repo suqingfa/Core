@@ -9,6 +9,7 @@ using WebApplication.Data;
 using WebApplication.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.Extensions.Logging;
 
 namespace WebApplication.Controllers
 {
@@ -18,17 +19,23 @@ namespace WebApplication.Controllers
 		private readonly ApplicationDbContext _context;
 		private readonly UserManager<ApplicationUser> _userManager;
 		private ApplicationUser _user { get => _userManager.GetUserAsync(HttpContext.User).Result; }
+		private readonly ILogger _logger;
 
-		public BlogsController(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
+		public BlogsController(ApplicationDbContext context, UserManager<ApplicationUser> userManager, ILogger<BlogsController> logger)
 		{
 			_context = context;
 			_userManager = userManager;
+			_logger = logger;
 		}
 
 		// GET: Blogs
 		public async Task<IActionResult> Index()
 		{
 			var applicationDbContext = _context.Blogs.Where(b=>b.UserId == _user.Id).Include(b => b.User);
+			_logger.LogDebug("≤‚ ‘Debug");
+			_logger.LogInformation("≤‚ ‘Info");
+			_logger.LogWarning("≤‚ ‘Warning");
+			_logger.LogError("≤‚ ‘Error");
 			return View(await applicationDbContext.ToListAsync());
 		}
 

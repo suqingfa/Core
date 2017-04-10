@@ -12,6 +12,7 @@ using Microsoft.Extensions.Logging;
 using WebApplication.Data;
 using WebApplication.Models;
 using WebApplication.Services;
+using NLog.Extensions.Logging;
 
 namespace WebApplication
 {
@@ -60,8 +61,9 @@ namespace WebApplication
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
+			loggerFactory.AddNLog(); //添加NLog
 
-            if (env.IsDevelopment())
+			if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
                 app.UseDatabaseErrorPage();
