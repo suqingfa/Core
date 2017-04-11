@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggingDemo", "LoggingDemo\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CachingDemo", "CachingDemo\CachingDemo.csproj", "{96AF6617-E59B-4E3E-B834-D5336C19A819}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REST", "REST\REST.csproj", "{7951033E-BABE-437C-A787-C14EBC2D7942}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RESTClient", "RESTClient\RESTClient.csproj", "{507BF14D-B2A5-4A1A-AB35-ED7CD590DCB2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{96AF6617-E59B-4E3E-B834-D5336C19A819}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96AF6617-E59B-4E3E-B834-D5336C19A819}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96AF6617-E59B-4E3E-B834-D5336C19A819}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7951033E-BABE-437C-A787-C14EBC2D7942}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7951033E-BABE-437C-A787-C14EBC2D7942}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7951033E-BABE-437C-A787-C14EBC2D7942}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7951033E-BABE-437C-A787-C14EBC2D7942}.Release|Any CPU.Build.0 = Release|Any CPU
+		{507BF14D-B2A5-4A1A-AB35-ED7CD590DCB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{507BF14D-B2A5-4A1A-AB35-ED7CD590DCB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{507BF14D-B2A5-4A1A-AB35-ED7CD590DCB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{507BF14D-B2A5-4A1A-AB35-ED7CD590DCB2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
