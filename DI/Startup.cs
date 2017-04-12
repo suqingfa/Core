@@ -29,7 +29,15 @@ namespace DI
         {
             // Add framework services.
             services.AddMvc();
-        }
+
+			// 注册接口和实现类的映射关系
+			// 瞬时，每次注入都会生成新值 
+			services.AddTransient<ITestTransient, TestInstance>();
+			// 域内，每次请求生成新值 
+			services.AddScoped<ITestScoped, TestInstance>();
+			// 单例
+			services.AddSingleton<ITestSingleton, TestInstance>();
+		}
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
