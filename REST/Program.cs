@@ -10,7 +10,8 @@ namespace REST
 {
     public class Program
     {
-        public static void Main(string[] args)
+#if !DEBUG
+		public static void Main(string[] args)
         {
             var host = new WebHostBuilder()
                 .UseKestrel()
@@ -22,5 +23,6 @@ namespace REST
 
             host.Run();
         }
-    }
+#endif
+	}
 }
