@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.0
+VisualStudioVersion = 15.0.26403.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication", "WebApplication\WebApplication.csproj", "{0E1880CB-8207-44CC-BC25-6C8C534E1DC6}"
 EndProject
@@ -16,6 +16,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REST", "REST\REST.csproj", "{7951033E-BABE-437C-A787-C14EBC2D7942}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RESTClient", "RESTClient\RESTClient.csproj", "{507BF14D-B2A5-4A1A-AB35-ED7CD590DCB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiddlewareDemo", "MiddlewareDemo\MiddlewareDemo.csproj", "{3D8F3F12-63F7-4B9D-AA4F-7CC9990FA336}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{507BF14D-B2A5-4A1A-AB35-ED7CD590DCB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{507BF14D-B2A5-4A1A-AB35-ED7CD590DCB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{507BF14D-B2A5-4A1A-AB35-ED7CD590DCB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D8F3F12-63F7-4B9D-AA4F-7CC9990FA336}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D8F3F12-63F7-4B9D-AA4F-7CC9990FA336}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D8F3F12-63F7-4B9D-AA4F-7CC9990FA336}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D8F3F12-63F7-4B9D-AA4F-7CC9990FA336}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
