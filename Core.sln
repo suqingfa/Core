@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiddlewareDemo", "Middlewar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilterDemo", "FilterDemo\FilterDemo.csproj", "{0B02D18C-AA91-4304-B6E7-95EC76E6CDA8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DI", "DI\DI.csproj", "{59BFAE03-0A81-4D57-B71B-9F68341BEF96}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{0B02D18C-AA91-4304-B6E7-95EC76E6CDA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B02D18C-AA91-4304-B6E7-95EC76E6CDA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B02D18C-AA91-4304-B6E7-95EC76E6CDA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59BFAE03-0A81-4D57-B71B-9F68341BEF96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59BFAE03-0A81-4D57-B71B-9F68341BEF96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59BFAE03-0A81-4D57-B71B-9F68341BEF96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59BFAE03-0A81-4D57-B71B-9F68341BEF96}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
