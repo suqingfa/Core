@@ -15,10 +15,12 @@ namespace WebApplication.Controllers
 		private readonly IMemoryCache _memoryCache;
 		private readonly ILogger _logger;
 
-		public HomeController(IMemoryCache memoryCache, ILoggerFactory loggerFactory)
+		public HomeController(
+            IMemoryCache memoryCache, 
+            ILogger<HomeController> logger)
 		{
 			_memoryCache = memoryCache;
-			_logger = loggerFactory.CreateLogger<HomeController>();
+			_logger = logger;
 		}
 
 		public IActionResult Index()

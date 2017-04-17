@@ -38,7 +38,7 @@ namespace WebApplication.Controllers
 			IOptions<IdentityCookieOptions> identityCookieOptions,
             IEmailSender emailSender,
             ISmsSender smsSender,
-            ILoggerFactory loggerFactory)
+            ILogger<AccountController> logger)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -47,7 +47,7 @@ namespace WebApplication.Controllers
 			_externalCookieScheme = identityCookieOptions.Value.ExternalCookieAuthenticationScheme;
             _emailSender = emailSender;
             _smsSender = smsSender;
-            _logger = loggerFactory.CreateLogger<AccountController>();
+            _logger = logger;
         }
 
         //
@@ -75,7 +75,7 @@ namespace WebApplication.Controllers
             {
                 // This doesn't count login failures towards account lockout
                 // To enable password failures to trigger account lockout, set lockoutOnFailure: true
-                var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, lockoutOnFailure: false);
+                var result = await _signInManager.PasswordSignInAsync(model.UserName, model.Password, model.RememberMe, lockoutOnFailure: false);
                 if (result.Succeeded)
                 {
                     _logger.LogInformation(1, "User logged in.");
@@ -121,7 +121,7 @@ namespace WebApplication.Controllers
             ViewData["ReturnUrl"] = returnUrl;
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, Sex = model.Sex };
+                var user = new ApplicationUser { UserName = model.UserName, Email = model.Email, Sex = model.Sex };
                 var result = await _userManager.CreateAsync(user, model.Password);
 
 				var Image = new byte[model.Head.Length];

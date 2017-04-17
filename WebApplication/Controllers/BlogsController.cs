@@ -21,7 +21,10 @@ namespace WebApplication.Controllers
 		private ApplicationUser _user { get => _userManager.GetUserAsync(HttpContext.User).Result; }
 		private readonly ILogger _logger;
 
-		public BlogsController(ApplicationDbContext context, UserManager<ApplicationUser> userManager, ILogger<BlogsController> logger)
+		public BlogsController(
+            ApplicationDbContext context, 
+            UserManager<ApplicationUser> userManager, 
+            ILogger<BlogsController> logger)
 		{
 			_context = context;
 			_userManager = userManager;
