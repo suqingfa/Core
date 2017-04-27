@@ -1,4 +1,4 @@
-﻿using HtmlAgilityPack;
+﻿using AngleSharp.Parser.Html;
 using System;
 using System.Net.Http;
 using System.Text;
@@ -13,24 +13,15 @@ namespace Html解析
 
             //加载Web 的页面并解析内容
             HttpClient client = new HttpClient();
-            HtmlDocument doc = new HtmlDocument();
-            doc.LoadHtml(client.GetStringAsync("http://www.gongjuji.net").Result);
+            string html = client.GetStringAsync("http://www.gongjuji.net").Result;
 
-            //以document 为基准
-            string rowPath = "/html/body/div[2]/div[2]";
-            HtmlNode row = doc.DocumentNode.SelectSingleNode(rowPath);
-
-            //创建row为基准
-            HtmlNodeCollection titles = row.SelectNodes("//h3");
-            foreach (HtmlNode item in titles)
+            //HTML 解析成 IDocument
+            var dom = new HtmlParser().Parse(html);
+            //从dom中提取所有class='col-sm-6'的div标签
+            var listDiv = dom.QuerySelectorAll("div.col-sm-6");
+            foreach (var item in listDiv)
             {
-                Console.WriteLine(item.InnerText);
-            }
-
-            HtmlNodeCollection links = doc.DocumentNode.SelectNodes("//a");
-            foreach (HtmlNode item in links)
-            {
-                Console.WriteLine(item.Attributes["href"].Value);
+                Console.WriteLine(item.QuerySelector("h3").InnerHtml);
             }
         }
     }
