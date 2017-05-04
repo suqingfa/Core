@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DI", "DI\DI.csproj", "{59BF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Html解析", "Html解析\Html解析.csproj", "{7519EE0F-BA11-4CD3-BD20-BE8CACA5A407}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendMail", "SendMail\SendMail.csproj", "{39F2B810-7CBD-45D5-879A-60FF1687C093}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{7519EE0F-BA11-4CD3-BD20-BE8CACA5A407}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7519EE0F-BA11-4CD3-BD20-BE8CACA5A407}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7519EE0F-BA11-4CD3-BD20-BE8CACA5A407}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39F2B810-7CBD-45D5-879A-60FF1687C093}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39F2B810-7CBD-45D5-879A-60FF1687C093}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39F2B810-7CBD-45D5-879A-60FF1687C093}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39F2B810-7CBD-45D5-879A-60FF1687C093}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
