@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendMail", "SendMail\SendMa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSocketDemo", "WebSocketDemo\WebSocketDemo.csproj", "{53FB4C17-CD5C-48B5-8C1C-952EE26754CF}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RunAsWindowsService", "RunAsWindowsService\RunAsWindowsService.csproj", "{8308C30C-6240-44A7-8C04-FB5C3F9ACB02}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{53FB4C17-CD5C-48B5-8C1C-952EE26754CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53FB4C17-CD5C-48B5-8C1C-952EE26754CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53FB4C17-CD5C-48B5-8C1C-952EE26754CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8308C30C-6240-44A7-8C04-FB5C3F9ACB02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8308C30C-6240-44A7-8C04-FB5C3F9ACB02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8308C30C-6240-44A7-8C04-FB5C3F9ACB02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8308C30C-6240-44A7-8C04-FB5C3F9ACB02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
