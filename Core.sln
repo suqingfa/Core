@@ -35,6 +35,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SafeStorageSecrets", "SafeS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JavaScriptService", "JavaScriptService\JavaScriptService.csproj", "{35D2E8C6-6DE5-49E7-9486-913FE8D4C1DA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreLocalization", "NetCoreLocalization\NetCoreLocalization.csproj", "{9C7A610F-BC97-402E-B1BD-672599A4AA8B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +107,10 @@ Global
 		{35D2E8C6-6DE5-49E7-9486-913FE8D4C1DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35D2E8C6-6DE5-49E7-9486-913FE8D4C1DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35D2E8C6-6DE5-49E7-9486-913FE8D4C1DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C7A610F-BC97-402E-B1BD-672599A4AA8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C7A610F-BC97-402E-B1BD-672599A4AA8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C7A610F-BC97-402E-B1BD-672599A4AA8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C7A610F-BC97-402E-B1BD-672599A4AA8B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
