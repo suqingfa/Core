@@ -16,7 +16,7 @@ sudo service nginx restart
 sudo apt-get install supervisor
 sudo vi /etc/supervisor/conf.d/core.conf
 	[program:WebApplication1]
-	command=dotnet /home/ubuntu/PublishOutput/WebApplication.dll
+	command=/usr/bin/dotnet /home/ubuntu/PublishOutput/WebApplication.dll
 	directory=/home/ubuntu/PublishOutput
 	autostart=true
 	autorestart=true
