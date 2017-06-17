@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.12
+VisualStudioVersion = 15.0.26430.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication", "WebApplication\WebApplication.csproj", "{0E1880CB-8207-44CC-BC25-6C8C534E1DC6}"
 EndProject
@@ -40,6 +40,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UseDiInConsole", "UseDiInConsole\UseDiInConsole.csproj", "{6A69BD82-4EF5-424D-AF6A-04FD77F5EB95}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF Core", "EF Core\EF Core.csproj", "{31973674-6E7D-43F0-869E-BA251A1B8444}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoutingDemo", "RoutingDemo\RoutingDemo.csproj", "{2746B2FA-A024-421B-9751-E16BC5E4C81B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -123,6 +125,10 @@ Global
 		{31973674-6E7D-43F0-869E-BA251A1B8444}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31973674-6E7D-43F0-869E-BA251A1B8444}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31973674-6E7D-43F0-869E-BA251A1B8444}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2746B2FA-A024-421B-9751-E16BC5E4C81B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2746B2FA-A024-421B-9751-E16BC5E4C81B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2746B2FA-A024-421B-9751-E16BC5E4C81B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2746B2FA-A024-421B-9751-E16BC5E4C81B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
